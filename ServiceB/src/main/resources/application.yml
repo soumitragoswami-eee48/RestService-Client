@@ -1,0 +1,33 @@
+## YAML Template.
+---
+server:
+    port : 1200
+    
+spring:
+   
+     application:
+        name: service2
+#     zipkin:
+#      baseUrl : http://localhost:9411/
+#     sleuth:
+#      sampler: 
+#         percentage: 1.0
+
+
+mapl:
+  messenger: 
+    enabled: N
+    consumer_ip: zookeeper:2181
+    consumer_session_timeout: 6000
+    consumer_sync_time: 2000
+    consumer_commit_interval: 1000
+    consumer_groupid: messenger
+    consumer_num_threads: 1
+    consumer_topics: messenger
+    producer_ip: kafka:9092
+    producer_metadata_fetch_timeout: 60000
+    producer_request_timeout: 30000
+    producer_reconnect: 60000
+    producer_acks: 1
+    producer_retries: 3
+    producer_lingerms: 5
